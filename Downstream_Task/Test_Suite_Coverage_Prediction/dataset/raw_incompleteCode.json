@@ -1,0 +1,92 @@
+{
+    "736": {
+        "id": "736",
+        "dType": "int", 
+        "code": "import math\nk = test_input_value\nif(k%2)==0:\n    print(\"-1\")\nelse:\n    flag=0\n    for x in range(1,1000001):\n        if (7%(9*k)*(pow(10,x,k*9)-1)%(9*k))==0:\n            print(x)\n            flag=1\n            break\n    if flag==0:\n        print(-1)",
+        "import_line": 0
+    },
+    "14510": {
+        "id": "14510",
+        "dType": "int", 
+        "code": "from math import factorial\nN = test_input_value;P = 0\nA = [1, 1, 1]\nnum_k=0\nnum_g=0\nfor i in range(N):\n    if A[i]%2==0:\n        num_g+=1\n    else:\n        num_k+=1\nn=num_k//2\nans_k=0\nfor i in range(0,n*2+1,2):\n    ans_k+=factorial(num_k)/factorial(i)/factorial(num_k-i)\nans_g=2**(num_g)\nans=int(ans_k*ans_g)\nif P==0:\n    print(ans)\nelse:\n    ans=2**N-ans\n    print(ans)",
+        "import_line": 0
+    },
+    "2410": {
+        "id": "2410",
+        "dType": "int",
+        "code": "n = test_input_value;m = 3\nimport math \nif n>=2 and m>=2:\n  ans = math.factorial(n)/math.factorial(n-2)/math.factorial(2) + math.factorial(m)/math.factorial(m-2)/math.factorial(2)\nelif n<2 and m>=2 :\n  ans =  math.factorial(m)/math.factorial(m-2)/math.factorial(2)\nelif m<2 and n>=2:\n  ans = math.factorial(n)/math.factorial(n-2)/math.factorial(2)\nelse:\n  ans = 0\nprint(int(ans))",
+        "import_line": 1
+    },
+    "2412": {
+        "id": "2412",
+        "dType": "int",
+        "code": "n = test_input_value;m = 3\nimport math \nif n>=2 and m>=2:\n  ans = math.factorial(n)/math.factorial(n-2)/math.factorial(2) + math.factorial(m)/math.factorial(m-2)/math.factorial(2)\nelif n<2 and m>=2 :\n  ans =  math.factorial(m)/math.factorial(m-2)/math.factorial(2)\nelif m<2 and n>=2:\n  ans = math.factorial(n)/math.factorial(n-2)/math.factorial(2)\nelse:\n  ans = 0\nprint(int(ans))",
+        "import_line": 1
+    },
+    "2444": {
+        "id": "2444",
+        "dType": "int",
+        "code": "import math\ndef combinations_count(n, r):\n    return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))\nN = test_input_value;M = 3\nif N==0 or N==1:\n    if M==0 or M==1:\n        print(0)\n        exit(0)\n    else:\n        print(combinations_count(M, 2))\n        exit(0\n        )\nif M==0 or M==1:\n    if N==0 or N==1:\n        print(0)\n        exit(0)\n    else:\n        print(combinations_count(N, 2))\n        exit(0)\nprint(combinations_count(N, 2)+combinations_count(M, 2))",
+        "import_line": 0
+    },
+    "2445": {
+        "id": "2445",
+        "dType": "int",
+        "code": "import math\ndef combinations_count(n, r):\n    return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))\nN = test_input_value;M = 3\nif N==0 or N==1:\n    if M==0 or M==1:\n        print(0)\n        exit(0)\n    else:\n        print(combinations_count(M, 2))\n        exit(0\n        )\nif M==0 or M==1:\n    if N==0 or N==1:\n        print(0)\n        exit(0)\n    else:\n        print(combinations_count(N, 2))\n        exit(0)\nprint(combinations_count(N, 2)+combinations_count(M, 2))",
+        "import_line": 0
+    },
+    "7912": {
+        "id": "7912",
+        "dType": "int",
+        "code": "from math import ceil\nN = test_input_value;K = 3\nA = [1, 2, 3]\nif N == K:\n    print(1)\nelif (N-1)%(K-1) == 0:\n    print((N-1)//(K-1))\nelif K == 2:\n    print(N-1)\nelse:\n    ans = ceil(N/(K-1))\n    print(ans)",
+        "import_line": 0
+    },
+    "7931": {
+        "id": "7931",
+        "dType": "int",
+        "code": "import math\nN = test_input_value;K = 3\nA = [2, 3, 1, 4]\npos_of_1 = A.index(1)\nif K >= pos_of_1 + 1 or N - K <= pos_of_1:\n  print(math.ceil((N - K) / (K - 1)) + 1) \nelse:\n  L = A[:pos_of_1 + 1]\n  R = A[pos_of_1:]\n  res = []\n  for i in range(1, K):\n    l = math.ceil((len(L) - i) / (K - 1)) + 1\n    r = math.ceil((len(R) - K - 1 + i) / (K - 1)) + 1\n    res.append(l + r - 1)\n  print(min(res))",
+        "import_line": 0
+    },
+    "7933": {
+        "id": "7933",
+        "dType": "int",
+        "code": "import math\nN = test_input_value;K = 3\nA = [7, 3, 1, 8, 4, 6, 2, 5]\npos_of_1 = A.index(1)\nif K >= pos_of_1 + 1 or N - K <= pos_of_1:\n  print(math.ceil((N - K) / (K - 1)) + 1) \nelse:\n  L = A[:pos_of_1 + 1]\n  R = A[pos_of_1:]\n  res = []\n  for i in range(1, K):\n    l = math.ceil((len(L) - i) / (K - 1)) + 1\n    r = math.ceil((len(R) - K - 1 + i) / (K - 1)) + 1\n    res.append(l + r - 1)\n  print(min(res))",
+        "import_line": 0
+    },
+    "13799": {
+        "id": "13799",
+        "dType": "int",
+        "code": "import math\nimport sys\nn = test_input_value\na = [1, 2, 1, 2, 1, 2, 1, 2, 1]\nflag = \"Init\"\nans = 0\nfor i in range(1, n):\n    if flag == \"Init\":\n        if a[i - 1] == a[i]:\n            pass\n        elif a[i - 1] > a[i]:\n            flag = \"-\"\n        else:\n            flag = \"+\"\n    elif flag == \"-\":\n        if a[i - 1] < a[i]:\n            ans += 1\n            flag = \"Init\"\n    else:\n        if a[i - 1] > a[i]:\n            ans += 1\n            flag = \"Init\"\nprint(ans + 1)",
+        "import_line": 0
+    },
+    "13932": {
+        "id": "13932",
+        "dType": "int",
+        "code": "import sys\nN = test_input_value\na = [1, 2, 3, 2, 2, 1]\nnum, cut = 0, 0\nif N == 1:\n    print(1)\n    sys.exit()\nfor i in range(N-1):\n    if a[i] == a[i+1]:\n        continue\n    if a[i] < a[i+1] and num == 0:\n        num  = 1\n        cut += 1\n    elif a[i] > a[i+1] and num == 0:\n        num = -1\n        cut += 1\n    elif num == 1 and a[i] > a[i+1]:\n        if i == N-2:\n            cut += 1\n        num = 0\n    elif num == -1 and a[i] < a[i+1]:\n        if i == N-2:\n            cut += 1\n        num = 0\nprint(cut)",
+        "import_line": 0
+    },
+    "14296": {
+        "id": "14296",
+        "dType": "int",
+        "code": "import sys\nN = test_input_value\nA = [1, 2, 1, 2, 1, 2, 1, 2, 1]\nif N == 1:\n    print(1)\n    sys.exit()\ninc = 0  \nans = 1\nfor i in range(N - 1):\n    if A[i] < A[i + 1]:\n        if inc == -1:\n            ans += 1\n            inc = 0\n        elif inc == 0:\n            inc = 1\n    elif A[i] > A[i + 1]:\n        if inc == 1:\n            ans += 1\n            inc = 0\n        elif inc == 0:\n            inc = -1\nprint(ans)",
+        "import_line": 0
+    },
+    "14521": {
+        "id" : "14521",
+        "dType" : "int",
+        "code" : "import math\ndef comb(n, r):\n    return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))\nN = test_input_value;P = 1\nA = [50]\neven_cnt = sum([1 for x in A if x%2 == 0])\nodd_cnt = sum([1 for x in A if x%2 != 0])\nif P == 0:\n    ans1 = 2**even_cnt\n    ans2 = 0\n    for i in range(0,odd_cnt+1,2):\n        ans2 += comb(odd_cnt,i)\nelse:\n    ans1 = 2**even_cnt\n    ans2 = 0\n    for i in range(1,odd_cnt+1,2):\n        ans2 += comb(odd_cnt,i)\nprint(ans1*ans2)",
+        "import_line": 0
+    },
+    "14529": {
+        "id" : "14529",
+        "dType" : "int",
+        "code": "from math import factorial\nn = test_input_value;p = 0\na = [1, 3]\neven=0\nodd=0\nfor i in a:\n    if i%2==0:\n        even+=1\n    else:\n        odd+=1\ndef comb(a,b):\n    return factorial(a)//(factorial(a-b)*factorial(b))\nn_even=0\nn_odd=0\nfor i in range(even+1):\n    n_even+=comb(even,i)\nif p==1:\n    for i in range(1,odd+1,2):\n        n_odd+=comb(odd,i)\nelse:\n    for i in range(0,odd+1,2):\n        n_odd+=comb(odd,i)\nprint(n_even*n_odd)",
+        "import_line": 0
+    },
+    "14530": {
+        "id": "14530",
+        "dType": "int",
+        "code": "from math import factorial\nn = test_input_value;p = 1\na = [50]\neven=0\nodd=0\nfor i in a:\n    if i%2==0:\n        even+=1\n    else:\n        odd+=1\ndef comb(a,b):\n    return factorial(a)//(factorial(a-b)*factorial(b))\nn_even=0\nn_odd=0\nfor i in range(even+1):\n    n_even+=comb(even,i)\nif p==1:\n    for i in range(1,odd+1,2):\n        n_odd+=comb(odd,i)\nelse:\n    for i in range(0,odd+1,2):\n        n_odd+=comb(odd,i)\nprint(n_even*n_odd)",
+        "import_line": 0
+    }
+}

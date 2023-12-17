@@ -1,0 +1,287 @@
+{
+    "1012": {
+        "id": "1012",
+        "dType": "int", 
+        "code": "n = test_input_value\nlis = [111, 222, 333, 444, 555, 666, 777, 888, 999]\nif n <= lis[0]:\n    print(lis[0])\nelif n <= lis[1]:\n    print(lis[1])\nelif n <= lis[2]:\n    print(lis[2])\nelif n <= lis[3]:\n    print(lis[3])\nelif n <= lis[4]:\n    print(lis[4])\nelif n <= lis[5]:\n    print(lis[5])\nelif n <= lis[6]:\n    print(lis[6])\nelif n <= lis[7]:\n    print(lis[7])\nelif n <= lis[8]:\n    print(lis[8])"
+    },
+    "1634": {
+        "id": "1634",
+        "dType": "int", 
+        "code": "a = test_input_value\nb = 50\nn = 10\nmaxint = 0\nminInt = 0\nif a <= b:\n  maxInt = a\n  minInt = a - (n-b)\nelse:\n  maxInt = b\n  minInt = b - (n-a)\nif a +b < n :\n    minInt = 0\nprint(maxInt, minInt)"
+    },
+    "6810": {
+        "id": "6810",
+        "dType": "list_int",
+        "code": "z = [20, 3]\nx = test_input_value\nd={}\nc=0\nfor i in x:\n    if d.get(i,0)==0:\n        c+=i\nif c>=z[0]:\n    print(\"Yes\")\nelse:\n    print(\"No\")"
+    },
+    "4": {
+        "id": "4",
+        "dType": "string",
+        "code": "S = test_input_value\nK = 25\nN = len(S)\nA = [0]*N\nans = \"\"\nfor i in range(N):\n  A[i] = (ord(\"z\") - ord(S[i]) + 1) % 26\n  if i != N-1:\n    if K >= A[i]:\n      K -= A[i]\n      ans += \"a\"\n    else:\n      ans += S[i]\n  else:\n    K = K % 26\n    s = ord(S[i]) + K\n    if s > ord(\"z\"):\n      s -= 26\n    ans += chr(s)\nprint(ans)"
+    },
+    "635": {
+        "id": "635",
+        "dType": "int",
+        "code": "k = test_input_value\nif k%2 == 0 or k%5 == 0:\n    print(-1)\nelse:\n    ans = -1\n    a = 7\n    if k == 7 or k==1:\n        print(1)\n    else:\n        for i in range(2,10**7):\n            a = (10*a + 7)%k\n            if a==0:\n                ans =i\n                break\n        print(ans)"
+    },
+    "914": {
+        "id": "914",
+        "dType": "int",
+        "code": "b = 0\nK = test_input_value\na = 7 % K\nfor i in range(K):\n  if a == 0:\n    b = 1\n    break\n  else:\n    a = (10 * a +7) % K\nif b == 0:\n  print(-1)\nelse:\n  print(i + 1)"
+    },
+    "915": {
+        "id": "915",
+        "dType": "int",
+        "code": "def main():\n    K = test_input_value\n    crawler = 7\n    found = False\n    i = 1\n    if (K % 2 ==0) or (K % 5 == 0):\n        print(-1)\n    else:\n        a = [0 for i in range (K+1)]\n        a[0] = 7\n        for i in range (1, K+1):\n            a[i] = (a[i-1]*10 + 7) % K\n        a[0] = a[0] % K\n        for i in a:\n            if i == 0:\n                print(a.index(i) + 1)\n                found = True\n                break\n        if not found:\n            print(-1)\nmain()"
+    },
+    "7776": {
+        "id": "7776",
+        "dType": "int",
+        "code": "N = 3\nK = test_input_value\nA = [1, 2, 3]\ni=A.index(1)+1\nif i<=K or i>=N-K:\n    ans=(N-K)//(K-1)+1 if (N-K)%(K-1)==0 else (N-K)//(K-1)+2\nelse:\n    for a in range(K):\n        if (i-a)%(K-1)==0 and (N-(i+(K-a)))%(K-1)==0:\n            b=0\n        else:\n            b=1\n    front=i//(K-1)\n    back=(N-(i+K))//(K-1)\n    ans=front+back+1+b\nprint(ans)"
+    },
+    "8141": {
+        "id": "8141",
+        "dType": "int",
+        "code": "N = 4\nK = test_input_value\nA = [2, 3, 1, 4]\ni=A.index(1)+1\nif i<=K or i>=N-K:\n    ans=(N-K)//(K-1)+1 if (N-K)%(K-1)==0 else (N-K)//(K-1)+2\nelse:\n    for a in range(K):\n        b=0 if (i-a)%(K-1)==0 and (N-(i+(K-a)))%(K-1)==0 else 1\n    front=i//(K-1)\n    back=(N-(i+K))//(K-1)\n    ans=front+back+1+b\nprint(ans)"
+    },
+    "10847": {
+        "id": "10847",
+        "dType": "list_int",
+        "code": "S = test_input_value\nN = len(S)\nflag = 0\nif S==S[::-1]:\n    x = S[:N//2]\n    if x==x[::-1]:\n        flag = 1\nif flag==1:\n    print(\"Yes\")\nelse:\n    print(\"No\")"
+    },
+    "17503": {
+        "id": "17503",
+        "dType": "int",
+        "code": "s = test_input_value\na = s//100\nb = s%100\nif 0 < b and b < 13 and 0 < a and a < 13:\n    print(\"AMBIGUOUS\")\nelif 0 < b and b < 13:\n    print(\"YYMM\")\nelif 0 < a and a < 13:\n    print(\"MMYY\")\nelse:\n    print(\"NA\")"
+    },
+    "18800": {
+        "id": "18800",
+        "dType": "int",
+        "code": "h = test_input_value\nw = 120\nn = 112\nif h >= w:\n  if n%h == 0:\n    print(str(n//h))\n  else:\n    print(str(n//h+1))\nelse:\n  if n%w == 0:\n    print(str(n//w))\n  else:\n    print(str(n//w+1))"
+    },
+    "18920": {
+        "id": "18920",
+        "dType": "int",
+        "code": "n = test_input_value\nif n%2!=0:\n    print(0)\nelse:\n    k=10\n    q = 0\n    while k<=n:\n        q += n//k\n        k *= 5\n    print(q)"
+    },
+    "18942": {
+        "id": "18942",
+        "dType": "int",
+        "code": "def cin():\n    in_ = test_input_value\n    if len(in_) == 1:  return in_[0]\n    else:  return in_\ndef fact_prime(n, p):\n    ret = 0\n    temp = p\n    while(n >= p):\n        ret += n // p\n        p *= temp\n    return ret\nn = cin()\nif n % 2:\n    n = (n + 1) // 2\n    a2 = fact_prime(2 * n, 2)\n    a5 = fact_prime(2 * n, 5)\n    b2 = fact_prime(n, 2) + n\n    b5 = fact_prime(n, 5)\n    ans = min(a2 - b2, a5 - b5)\nelse:\n    n = n // 2\n    ans = fact_prime(n, 5)\nprint(ans)"
+    },
+    "18955": {
+        "id": "18955",
+        "dType": "int",
+        "code": "import math\nN = test_input_value\nans = 0\nif N == 0 or N % 2 == 1:\n    ans = 0\nelse:\n    digN = round( math.log(N , 5) )\n    i = 1\n    while i <= digN:\n        ans +=  ( N //( 5 ** i * 2 ) )\n        i += 1\nprint(ans)"
+    },
+    "47": {
+        "id": "47",
+        "code": "s = test_input_value\nK = 25\ni = 0\nwhile K > 0 and i < len(s)-1:\n    if s[i] != 0 and 26-s[i] <= K:\n        K -= 26-s[i]\n        s[i] = 0\n    else:\n        i += 1\ns[-1] = (s[-1]+K)%26 \nprint(*[chr(x+97) for x in s], sep = '')",
+        "dType": "list_int"
+    },
+    "58": {
+        "id": "58",
+        "code": "s = test_input_value\nk = 25\nans = []\nfor c in s[:-1]:\n    to_a = (ord('z')-ord(c)+1) % 26\n    if k < to_a:\n        ans.append(c)\n    else:\n        k -= to_a\n        ans.append('a')\nelse:\n    c = s[-1]\n    x = ord(c)-ord('a')\n    y = (k+x) % 26\n    ans.append(chr(ord('a')+y))\nprint(''.join(ans))",
+        "dType": "string"
+    },
+    "122": {
+        "id": "122",
+        "code": "s = test_input_value\nk = 25\nfor i in range(len(s)-1):\n  if s[i] == ord(\"a\"): continue\n  t = ord(\"z\")+1-s[i]\n  if k >= t:\n    s[i] = 97\n    k -= t\nif k > 0:\n  k %= 26\n  s[-1] += k\n  if s[-1] > ord(\"z\"):\n    s[-1] -= 26\nprint(\"\".join(list(map(chr, s))))",
+        "dType": "list_int"
+    },
+    "148": {
+        "id": "148",
+        "code": "s = test_input_value\nl=len(s)\nk = 25\nz=''\nfor i in range(l):\n  t=123-ord(s[i])\n  if s[i]=='a':\n    z+='a'\n  elif t<=k:\n    z+='a'\n    k-=t\n  else:\n    z+=s[i]\nv=ord(z[l-1])-97+k\nz=z[:l-1]+chr(v%26+97)\nprint(z)",
+        "dType": "string"
+    },
+    "162": {
+        "id": "162",
+        "code": "s = test_input_value\nK = 25\nk = K\nans = \"\"\nfor i in range(len(s)-1):\n    if(s[i] == \"a\"):\n        ans += s[i]\n        continue\n    if(ord(s[i])+k >= ord(\"z\")+1):\n        ans += \"a\"\n        k -= ord(\"z\")+1-ord(s[i])\n    else:\n        ans += s[i]\na = ord(s[-1])+k%26\nif(a > ord(\"z\")):\n    a -= 26\nans += chr(a)\nprint(ans)",
+        "dType": "string"
+    },
+    "179": {
+        "id": "179",
+        "code": "s = test_input_value\nk = 25\nans = []\nfor i in range(len(s)):\n    if 123 - ord(s[i]) <= k:\n        if s[i] == \"a\":\n            ans.append(\"a\")\n            continue\n        ans.append(\"a\")\n        k -= 123 - ord(s[i])\n    else:\n        ans.append(s[i])\nlast = chr((ord(ans[-1])-97+k)%26 + 97)\nans[-1] = last\nprint(*ans, sep = \"\")",
+        "dType": "string"
+    },
+    "182": {
+        "id": "182",
+        "code": "s = test_input_value\nk = 25\nans=\"\"\nfor i in s[:-1]:\n    if i==\"a\":\n        ans+=i\n        continue\n    if k>=123-ord(i):\n        k-=123-ord(i)\n        ans+=\"a\"\n    else:\n        ans+=i\ni=s[-1]\nans+=chr((ord(i)+k-97)%26+97)\nprint(ans)",
+        "dType": "string"
+    },
+    "222": {
+        "id": "222",
+        "code": "S = test_input_value\nK = 25\nN = len(S)\nT = list(S)\nfor i in range(N - 1):\n    if T[i] == 'a':\n        continue\n    if K >= ord('z') - ord(T[i]) + 1:\n        K -= ord('z') - ord(T[i]) + 1\n        T[i] = 'a'\nT[N - 1] = chr(ord('a') + (ord(T[N - 1]) - ord('a') + K) % 26)\nprint(\"\".join(T))",
+        "dType": "string"
+    },
+    "243": {
+        "id": "243",
+        "code": "s = test_input_value\nK = 25\nans = ''\nfor i, c in enumerate(s):\n    dif = ord('z') - ord(c) + 1\n    dif %= 26\n    if i == len(s) - 1:\n        K %= 26\n        if ord(c) + K > ord('z'):\n            K -= 26\n        ans += chr(ord(c) + K)\n    elif dif <= K:\n        ans += 'a'\n        K -= dif\n    else:\n        ans += c\nprint(ans)",
+        "dType": "string"
+    },
+    "253": {
+        "id": "253",
+        "code": "S = test_input_value\nK = 25\noz = ord(\"z\")\nans = \"\"\nfor s in S[:-1]:\n    if s != \"a\" and oz+1-ord(s) <= K:\n        K -= oz+1-ord(s)\n        ans += \"a\"\n    else:\n        ans += s\nans += chr(((ord(S[-1])-ord(\"a\")+K)%26)+ord(\"a\"))\nprint(ans)",
+        "dType": "string"
+    },
+    "280": {
+        "id": "280",
+        "code": "s = test_input_value\nk = 25\nl = \"abcdefghijklmnopqrstuvwxyz\"\nans = \"\"\nfor i in range(len(s) - 1):\n    num = (26 - l.index(s[i])) % 26\n    if k >= num:\n        ans += \"a\"\n        k -= num\n    else:\n        ans += s[i]\nans += l[(l.index(s[-1]) + k) % 26]\nprint(ans)",
+        "dType": "string"
+    },
+    "300": {
+        "id": "300",
+        "code": "s = test_input_value\nk = 25\nresult=\"\"\nfor ss in s:\n    if ss==\"a\":\n        result+=\"a\"\n    else:\n        if k>= 123 - ord(ss):\n            k-=123-ord(ss)\n            result+=\"a\"\n        else:\n            result+=ss\nif k>0:\n    k=k%(123-97)\n    temp=chr((((ord(result[-1])-97)+k)%(123-97))+97)\n    print(result[:-1]+temp)\nelse:\n    print(result)",
+        "dType": "string"
+    },
+    "212": {
+        "id": "212",
+        "code": "s = test_input_value\nk = 4\nslen = len(s)\nnew_s = \"\"\nfor i in range(slen):\n  val = (ord(\"z\") + 1 - ord(s[i])) % 26\n  if k >= val:\n    k -= val\n    new_s += \"a\"\n  else:\n    new_s += s[i]\nif k > 0:\n  tmp_val = ord(new_s[slen-1]) + k % 26\n  if tmp_val > ord(\"z\"):\n    tmp_val -= 26\n  new_s = new_s[:-1] + chr(tmp_val)\nprint(new_s)",
+        "dType": "string"
+    },
+    "308": {
+        "id": "308",
+        "code": "s = test_input_value\nk = 25\nL = []\nfor i in range(len(s)):\n    L.append((ord(\"z\")-ord(s[i])+1))\nans = \"\"\ni = 0\nwhile i < len(s):\n    if s[i] == \"a\":\n        ans +=\"a\"\n        i +=1\n    elif k-L[i] >= 0:\n        ans +=\"a\"\n        k -=L[i]\n        i +=1\n    else:\n        ans +=s[i]\n        i +=1\nk = k%26\nans = ans[:-1] + chr(ord(ans[-1]) + k)\nprint(ans)",
+        "dType": "string"
+    },
+    "324": {
+        "id": "324",
+        "code": "s = test_input_value\nk = 25\nfor i in range(len(s)):\n    if s[i] == 97: continue\n    if 123 - s[i] <= k:\n        k -= 123 - s[i]\n        s[i] = 97\n        if k == 0:\n            break\nif k != 0:\n    s[-1] = s[-1] + k % 26\nprint(\"\".join([chr(i) for i in s]))",
+        "dType": "list_int"
+    },
+    "384": {
+        "id": "384",
+        "code": "S = test_input_value\nK = 25\ncnt = K\nans = ''\nfor s in S:\n    if s == 'a':\n        ans += 'a'\n    elif cnt >= 123 - ord(s):\n        cnt -= 123 - ord(s)\n        ans += 'a'\n    else:\n        ans += s\nlast = ans[-1]\nlast = chr((ord(last) - 97 + cnt) % 26 + 97)\nprint(ans[:-1] + last)",
+        "dType": "string"
+    },
+    "396": {
+        "id": "396",
+        "code": "s = test_input_value\nk = 25\nans=''\nfor i in range(len(s)-1):\n  if s[i]=='a':\n    ans+='a'\n  else:\n    if k>=123-ord(s[i]):\n      k-=(123-ord(s[i]))\n      ans+='a'\n    else:\n      ans+=s[i]\nans+=chr((ord(s[-1])-97+k)%26+97)\nprint(ans)",
+        "dType": "string"
+    },
+    "417": {
+        "id": "417",
+        "code": "s = test_input_value\nk = 25\na = ord(\"a\") + 26\nmod = 26\nans = \"\"\nfor i in s[:-1]:\n  tmp = (a - ord(i)) % mod\n  if tmp <= k:\n    k -= tmp\n    ans += \"a\"\n  else:\n    ans += i\nans += chr(ord(\"a\") + (ord(s[-1]) - a + k) % mod)\nprint(ans)",
+        "dType": "string"
+    },
+    "479": {
+        "id": "479",
+        "code": "s = test_input_value\nk = 25\nres=[]\nfor i in range(len(s)):\n    num = ord(s[i])-97\n    if i==len(s)-1:\n        res.append(chr((num+k)%26+97))\n    elif s[i] == \"a\":\n        res.append(\"a\")\n    elif 26 - num <= k:\n        res.append(\"a\")\n        k-=26-num\n    else:\n        res.append(s[i])\nprint(\"\".join(res))",
+        "dType": "string"
+    },
+    "492": {
+        "id": "492",
+        "code": "s = test_input_value\nk = 25\nalpha=list('abcdefghijklmnopqrstuvwxyz')\nans=[]\nfor i in range(len(s)):\n    ki= 26-alpha.index(s[i]) if s[i]!='a' else 0\n    if(i==len(s)-1):\n        kn=k+alpha.index(s[i])\n        kn=kn%26\n        ans.append(alpha[kn])\n    elif(ki<=k):\n        ans.append('a')\n        k-=ki\n    else:\n        ans.append(s[i])\nprint(''.join(ans))",
+        "dType": "string"
+    },
+    "510": {
+        "id": "510",
+        "code": "S = test_input_value\nK = 25\nz = ord('z') + 1\nres = \"\"\nflg = False\nfor i,c in enumerate(S):\n    if c == 'a':\n        res += 'a'\n        continue\n    elif z - ord(c) <= K:\n        res += 'a'\n        K -= z-ord(c)\n    else:\n        res += chr(ord(c))\nres = res[:-1] + chr((ord(res[-1])-ord('a') + K) % 26 + ord('a'))\nprint(res)",
+        "dType": "string"
+    },
+    "528": {
+        "id": "528",
+        "code": "S = test_input_value\nK = 25\nans = \"\"\nfor s in S:\n    if s == \"a\":\n        ans += s\n    elif 123-ord(s) <= K:\n        ans += \"a\"\n        K -= 123-ord(s)\n    else:\n        ans += s\nif K > 0:\n    ans = ans[:-1] + chr((ord(ans[-1])-97+K)%26+97)\nprint(ans)",
+        "dType": "string"
+    },
+    "549": {
+        "id": "549",
+        "code": "a = test_input_value\nn=len(a)\nm = 25\nans=\"\"\nfor i in range(n-1):\n  if a[i]==\"a\":\n    ans += \"a\"\n    continue\n  x=ord(a[i])-97\n  if m>=26-x:\n    ans += \"a\"\n    m -= 26-x\n  else:\n    ans += a[i]\nans += chr((ord(a[n-1])-97+m)%26+97)\nprint(ans)",
+        "dType": "string"
+    },
+    "584": {
+        "id": "584",
+        "code": "s = test_input_value\nls = len(s)\nk = 25\nfor i in range(ls-1):\n    tn = ord('z')-ord(s[i])+1\n    if k>=tn and s[i]!='a':\n        k-=tn\n        print('a',end='')\n    else:\n        print(s[i],end='')\nik = (k + ord(s[-1])-ord('a')) % 26\nprint(chr(ord('a')+ik))",
+        "dType": "string"
+    },
+    "645": {
+        "id": "645",
+        "code": "K = test_input_value\nif K % 7 == 0:\n    K //= 7\nL = 9 * K\nif L % 2 == 0 or L % 5 == 0:\n    ans = -1\nelse:\n    ans = 0\n    R = 10\n    while 1:\n        ans += 1\n        if R % L == 1:\n            break\n        else:\n            R = (10 * R) % L\nprint(ans)",
+        "dType": "int"
+    },
+    "650": {
+        "id": "650",
+        "code": "ans = test_input_value\na = 0\nK = 2\nif K % 2 == 0:\n    ans = -1\nelif K % 5 == 0:\n    ans = -1\nelse:\n    for i in range(0, K):\n        a = (10 * a + 7) % K\n        if a == 0:\n            ans = i + 1\n            break\nprint(ans)",
+        "dType": "int"
+    },
+    "682": {
+        "id": "682",
+        "code": "k = test_input_value\nx = 7%k\ncnt = 0\nif k%2 ==0:\n    print('-1')\nelse:\n    while True:\n        cnt += 1\n        if x == 0:\n            print(cnt)\n            break\n        elif cnt == k:\n            print('-1')\n            break\n        else:\n            x = (x*10+7)%k",
+        "dType": "int"
+    },
+    "687": {
+        "id": "687",
+        "code": "k = test_input_value\nif k % 2 == 0 or k % 5 == 0:\n    print(-1)\nelse:\n    exc = 0\n    for i in range(1, 10 ** 8):\n        exc = exc * 10 + 7\n        exc = exc % k\n        if exc % k == 0:\n            ans = i\n            break\n    print(ans)",
+        "dType": "int"
+    },
+    "703": {
+        "id": "703",
+        "code": "k = test_input_value\nflag = 0\ntemp = 7\nfor i in range(k):\n    if(temp % k == 0):\n        flag = 1\n        break\n    else:\n        temp = temp % k\n        temp = temp * 10 % k\n        temp = temp + 7\nif (flag == 0):\n    print(\"-1\")\nelse:\n    print(i+1)",
+        "dType": "int"
+    },
+    "729": {
+        "id": "729",
+        "code": "K = test_input_value\nans=-1\np=10\nif K%7==0:\n  l=9*K//7\nelse:\n  l=9*K\nfor i in range(K):\n  if p%l==1:\n    ans=i+1\n    break\n  else:\n    p=(p%l)*10\nprint(ans)",
+        "dType": "int"
+    },
+    "751": {
+        "id": "751",
+        "code": "k = test_input_value\ns = 7\nnum = 1\nres = True\nif k == 2:\n    print(-1)\nelse:\n    for i in range(k):\n        s %= k\n        if s == 0:\n            res = False\n            print(num)\n            break\n        num += 1\n        s *= 10\n        s += 7\n    if res:\n        print(-1)",
+        "dType": "int"
+    },
+    "804": {
+        "id": "804",
+        "code": "x=test_input_value\nans=1\nk = 2\nif k%2==0 or k%5==0:\n  print(-1)\nelse:\n  for i in range(1,k):\n    if x%k==0:\n      break\n    x=(x*10+7)%k\n    ans+=1\n  print(ans)",
+        "dType": "int"
+    },
+    "847": {
+        "id": "847",
+        "code": "k = test_input_value\nif k % 2 == 0 or k % 5 == 0:\n    print(-1)\nelif k == 1 or k == 7:\n    print(1)\nelse:\n    t = 2\n    ex = 77\n    for i in range(10 ** 8):\n        if ex % k == 0:\n            break\n        ex = (ex % k) * 10 + 7\n        t += 1\n    print(t)",
+        "dType": "int"
+    },
+    "935": {
+        "id": "935",
+        "code": "k = test_input_value\nnum=7\ni=1\nwhile True:\n    if k%2==0 or k%5==0:\n        i=-1\n        break\n    num%=k\n    if num==0:\n        break\n    else:\n        num*=10\n        num+=7\n        i+=1\nprint(i)",
+        "dType": "int"
+    },
+    "1000": {
+        "id": "1000",
+        "code": "N = test_input_value\nif N <= 111:\n    print(111)\nelif N <= 222:\n    print(222)\nelif N <= 333:\n    print(333)\nelif N <= 444:\n    print(444)\nelif N <= 555:\n    print(555)\nelif N <= 666:\n    print(666)\nelif N <= 777:\n    print(777)\nelif N <= 888:\n    print(888)\nelif N <= 999:\n    print(999)\nelse:\n    print(1111)",
+        "dType": "int"
+    },
+    "1178": {
+        "id": "1178",
+        "code": "x = test_input_value\nif int(x[0])>int(x[1]):\n  print (x[0]*3)\nelif int(x[0])==int(x[1]):\n  if int(x[0])>=int(x[2]):\n    print (x[0]*3)\n  else:\n    print (str(int(x[0])+1)*3)\nelse:\n  print (str(int(x[0])+1)*3)",
+        "dType": "string"
+    },
+    "1251": {
+        "id": "1251",
+        "code": "n = test_input_value\nif n<112:\n    print(111)\nelif n<223:\n    print(222)\nelif n<334:\n    print(333)\nelif n<445:\n    print(444)\nelif n<556:\n    print(555)\nelif n<667:\n    print(666)\nelif n<778:\n    print(777)\nelif n<889:\n    print(888)\nelse:\n    print(999)",
+        "dType": "int"
+    },
+    "1298": {
+        "id": "1298",
+        "code": "N = test_input_value\nif N[1] < N[0]:\n  print(N[0] * 111)\nelif N[1] > N[0]:\n  print((N[0]+1) * 111)\nelse:\n  if N[2] <= N[0]:\n    print(N[0] * 111)\n  else:\n    print((N[0]+1) * 111)",
+        "dType": "list_int"
+    },
+    "1535": {
+        "id": "1535",
+        "code": "n = test_input_value\nif n.count(n[0]) == 3:\n    print(n)\nelse:\n    num = int(str(n[0])+str(n[0])+str(n[0]))\n    if int(n) > num:\n        a = min(int(n[0])+1, 9)\n        print(\"%d%d%d\" % (a, a, a))\n    else:\n        print(num)",
+        "dType": "string"
+    },
+    "1555": {
+        "id": "1555",
+        "code": "n = test_input_value\nif 100<=n<=111: print(111)\nelif 112<=n<=222:print(222)\nelif 223<=n<=333:print(333)\nelif 334<=n<=444:print(444)\nelif 445<=n<=555:print(555)\nelif 556<=n<=666:print(666)\nelif 667<=n<=777:print(777)\nelif 778<=n<=888:print(888)\nelse:print(999)",
+        "dType": "int"
+    },
+    "1924": {
+        "id": "1924",
+        "code": "n = 10;x = test_input_value;y = 5\nif x+y<=n:\n    Min=0\n    if x<=y:\n        Max=x\n    else:\n        Max=y\nelse:\n    Min=(x+y)-n\n    if x<=y:\n        Max=x\n    else:\n        Max=y\nprint(\"{} {}\".format(Max,Min))",
+        "dType": "int"
+    },
+    "1926": {
+        "id": "1926",
+        "code": "n = 100;x = test_input_value;y = 100\nif x+y<=n:\n    Min=0\n    if x<=y:\n        Max=x\n    else:\n        Max=y\nelse:\n    Min=(x+y)-n\n    if x<=y:\n        Max=x\n    else:\n        Max=y\nprint(\"{} {}\".format(Max,Min))",
+        "dType": "int"
+    }
+}
