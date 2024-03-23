@@ -1,7 +1,5 @@
 # Least 5 lines
 macro_accuracy_list_least = []
-# Most 5 lines
-macro_accuracy_list_most = []
 import json
 with open('../dataset/IncompleteCode_ground_truth/output_without_importline.json', 'r') as file:
     data = json.load(file)
@@ -12,10 +10,9 @@ for id in data:
     ground_truth_coverage = []
 
     for tId in data[id]:
-        
         ground_truth_coverage.append(data[id][tId]['execution_array'])
 
-    with open(f'../model/model_partialDataset_output/partialCode_output_downstream_task_{id}.json' , 'r') as file:
+    with open(f'../output/model_partialDataset_output/partialCode_output_downstream_task_{id}.json' , 'r') as file:
         model_output = json.load(file)
 
      # Predicted
@@ -63,13 +60,6 @@ for id in data:
                 count += 1
             macro_accuracy_list_least.append((count/5)*100)
 
-        # Macco Accuracy Most
-        count = 0
-        for i in range(5):
-            if sorted_gt_dict_desc[i] == sorted_pd_dict_desc[i]:
-                count += 1
-        macro_accuracy_list_most.append((count/5)*100)
-
     # Getting same Model Output as compare to the Ground Truth
     if len(ground_truth_coverage) == len(pred_coverage):
         # Merge Line number Sum 
@@ -112,20 +102,8 @@ for id in data:
                 count += 1
         macro_accuracy_list_least.append((count/5)*100)
         
-        # Macro Accuracy Most
-        count = 0
-        for i in range(5):
-            if sorted_gt_dict_desc[i] == sorted_pd_dict_desc[i]:
-                count += 1
-        macro_accuracy_list_most.append((count/5)*100)
-
-
 # Macro Acuracy
 print(f"Length of the Macro List Least: {len(macro_accuracy_list_least)}")
 print(f"Macro Accuracy Least: {sum(macro_accuracy_list_least) / len(macro_accuracy_list_least)}")
 
 print("="*50)
-
-# Macro Acuracy
-print(f"Length of the Macro List Most: {len(macro_accuracy_list_most)}")
-print(f"Macro Accuracy: {sum(macro_accuracy_list_most) / len(macro_accuracy_list_most)}")
